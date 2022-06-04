@@ -48,5 +48,7 @@ function resizeCanvas(canvas, w, h)
     if(canvas.tagName.toLowerCase() == "canvas"){
         canvas.style.Width = w+(typeof w === "integer")?"px":"";
         canvas.style.Height = h+(typeof h === "integer")?"px":"";
+        canvas.setAttribute("width", w+((typeof w === "number")?"px":""));
+        canvas.setAttribute("height", h+((typeof h === "number")?"px":""));
     }
 }
